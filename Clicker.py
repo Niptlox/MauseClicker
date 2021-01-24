@@ -2,7 +2,7 @@ try:
     import mouse as m
 except:
     print("У вас не установлен модуль mause. \nДля установки модуля mause пропишите в командной сторке: pip install mause")
-    input("Для выхода нажмите Enter...")
+    input("Для выхода нажмите ENTER...")
     exit()
 
 from time import sleep as delay
@@ -27,6 +27,7 @@ def clicker(speed):
     abs_xy = SIZE_RECT_MAUSE // 2
     sec_s = 1 / speed
     j = 0
+    # Число кликов после которого будет показано количество сделанный кликов
     n = 200
     while True:
         i = 0
@@ -49,6 +50,8 @@ def clicker(speed):
 
 m.on_button(lambda:clicker(SPEED), buttons=[m.MIDDLE], types=[m.DOUBLE])
 
-while True:
-    pass
-input("Press ENTER for close app\n")
+## Для запуска чере Python IDLE раскоментировать цикл
+##while True:
+##    pass
+
+input("Чтобы закрыь нажмите ENTER\n")
